@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.pyc
+llama-3.2-3b-instruct/
+model/
