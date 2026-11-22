@@ -23,7 +23,7 @@ class LLMWrapper:
         self.max_input_length = min(2048, getattr(self.tokenizer, "model_max_length", 2048))
         self.model = AutoModelForCausalLM.from_pretrained(
             model_dir,
-            torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+            dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
             device_map="auto" if torch.cuda.is_available() else None,
         )
         self.model.eval()

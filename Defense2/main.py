@@ -16,7 +16,7 @@ def acquire_single_instance_lock():
     try:
         fcntl.flock(lock_file, fcntl.LOCK_EX | fcntl.LOCK_NB)
     except BlockingIOError:
-        print("Defense2.main is already running. Close the old terminal first.")
+        print("Defense2.main is already running")
         sys.exit(1)
 
     lock_file.write(str(os.getpid()))

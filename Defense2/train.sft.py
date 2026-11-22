@@ -25,7 +25,7 @@ class JailbreakDataset(Dataset):
  
     def __len__(self):
         return len(self.texts)
- 
+
     def __getitem__(self, idx):
         encoding = self.tokenizer(
             self.texts[idx],
