@@ -60,7 +60,6 @@ class ChatCore:
 
         if guard["verdict"] == "BLOCK":
             answer = SAFE_REFUSAL
-            self._add_turn("assistant", answer)
         else:
             if self.llm is None:
                 self.llm = LLMWrapper()
